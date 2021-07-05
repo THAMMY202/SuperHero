@@ -1,4 +1,4 @@
-package com.dvt.weather.utils
+package com.immedia.superhero.utils
 
 class Constants {
     companion object {

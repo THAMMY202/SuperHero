@@ -7,7 +7,7 @@ import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.dvt.weather.utils.Constants
+import com.immedia.superhero.utils.Constants
 import com.immedia.superhero.R
 import com.immedia.superhero.adapter.SuperHeroAdapter
 import com.immedia.superhero.model.SuperHero

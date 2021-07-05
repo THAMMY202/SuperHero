@@ -1,7 +1,5 @@
 package com.immedia.superhero.model
 
-import Image
-
 data class Results (
 
 	val id : Int,
