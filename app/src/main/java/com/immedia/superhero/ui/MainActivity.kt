@@ -54,8 +54,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = customAdapter
         prepareItems()
     }
-
-
+    
     private fun prepareItems() {
         fillRepositoryWithFakeData()
         customAdapter.notifyDataSetChanged()

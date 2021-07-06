@@ -1,6 +1,8 @@
 package com.immedia.superhero.adapter
 
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.immedia.superhero.R
 import com.immedia.superhero.model.SuperHero
+import com.immedia.superhero.ui.SuperHeroDetailActivity
 
 internal class SuperHeroAdapter(private var itemsList: List<SuperHero>) :
     RecyclerView.Adapter<SuperHeroAdapter.MyViewHolder>() {
@@ -49,7 +52,13 @@ internal class SuperHeroAdapter(private var itemsList: List<SuperHero>) :
         }
 
         holder.itemImageView.setOnClickListener {
-            Toast.makeText(context, item.name, Toast.LENGTH_SHORT).show()
+           val intent = Intent(holder.itemView.context, SuperHeroDetailActivity::class.java)
+           intent.putExtra("name", item.name)
+           intent.putExtra("photo", item.photo)
+           intent.putExtra("description", item.description)
+           intent.putExtra("isAvenger", item.isAvenger)
+           holder.itemView.context.startActivity(intent)
+           Log.i("passing the hero", item.toString())
         }
 
     }
